@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+//apply plugin: 'jetty'
+
+group = 'test-rxjava-hystrix'
+version = '1.0-SNAPSHOT'
+
+description = """"""
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+  mavenCentral()
+  mavenLocal()
+}
+
+dependencies {
+  compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.0-beta9'
+  compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.0-beta9'
+  compile group: 'com.netflix.hystrix', name: 'hystrix-core', version: '1.3.9-SNAPSHOT'
+  compile group: 'com.netflix.hystrix', name: 'hystrix-metrics-event-stream', version: '1.3.8'
+  compile group: 'org.javasimon', name: 'javasimon-core', version: '3.4.0'
+  compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+  compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.1.1.v20140108'
+  compile group: 'org.eclipse.jetty', name: 'jetty-webapp', version: '9.1.1.v20140108'
+}
